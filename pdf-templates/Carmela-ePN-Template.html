@@ -44,19 +44,19 @@
 <body>
 <div id="textdiv">
     <p style="text-align:justify"><img alt="CARD-RBI-LOGO" src="/Users/g.tan/Projects/Pdf-Generator/Go_Template/pdf-templates/CARD-RBI-LOGO.png" style="height:80px; width:245px" /></p>
-    <p style="text-align:right">&nbsp;PN No. <strong>{{ .PNNUM }}</strong></span></span></p>
+    <p style="text-align:right">&nbsp;PN No. <strong>{{ .Pnum }}</strong></span></span></p>
 
     <p style="text-align:right"><strong>PANANAGUTAN SA PAGKAKAUTANG</strong></p>
 
     <p id="RA">(Alinsunod sa utos ng RA No. &quot;Truth and Lending Act&quot;)</p>
 
-    <p style="text-align:right">Date Granted: <strong>{{DATE}}</strong></p>
+    <p style="text-align:right">Date Granted: <strong>{{ .Date }}</strong></p>
 
-    <p>Pangalan ng Humiram: <strong>{{NAME}}</strong></p>
+    <p>Pangalan ng Humiram: <strong>{{ .Name }}</strong></p>
 
     <p>&nbsp;</p>
 
-    <p style="text-align:justify">Ako si <strong>{{NAME}}</strong>&nbsp;may sapat na gulang, kasal kay <strong>{{SPOUSENAME}}</strong>&nbsp;nakatira at may pahatiring sulat sa <strong>{{ADDRESSES}}</strong>&nbsp;ay sumasang-ayon na sa pamamagitan ng kasulatang ito ay patunay na ako/kami ay may pagkaka-utang sa <strong>CARD MRI RIZAL BANK Inc.&nbsp;</strong>ayon sa sumusunod:</p>
+    <p style="text-align:justify">Ako si <strong>{{ .Name }}</strong>&nbsp;may sapat na gulang, kasal kay <strong>{{ .Spouse_name }}</strong>&nbsp;nakatira at may pahatiring sulat sa <strong>{{ .Addresses }}</strong>&nbsp;ay sumasang-ayon na sa pamamagitan ng kasulatang ito ay patunay na ako/kami ay may pagkaka-utang sa <strong>CARD MRI RIZAL BANK Inc.&nbsp;</strong>ayon sa sumusunod:</p>
 </div>
 <br>
 <div style="width: 100%">
@@ -65,12 +65,12 @@
             <tr>
                 <td colspan="5" style="width:70%">1. Halaga ng Pagkakautang</td>
                 <td style="width:20%"></td>
-                <td class="colright" style="width:10%">{{PRIN}}</td>
+                <td class="colright" style="width:10%">{{ .Prin }}</td>
             </tr>
             <tr>
                 <td colspan="5" >2.Porsiyento ng Interest kada buwan (Contractual Rate)</td>
-                <td>{{M_TERM}} na buwan</td>
-                <td class="colright" >{{NOMFLATRATE}}</td>
+                <td>{{ .M_term }} na buwan</td>
+                <td class="colright" >{{ .Nomflatrate }}</td>
             </tr>
             <tr>
                 <td colspan="5" >3.Prosiyento ng Interest kada buwan sa panahon ng pag-kakautang (Effective Interest Rate)</td>
